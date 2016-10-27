@@ -105,7 +105,7 @@ class Fa_Plugin_Performance_Checker{
 			$foldername = $name[0];
 			$filename = $name[1];
 			$abspath = WP_PLUGIN_DIR.'/'.$foldername.'/'.$filename;
-			$data = get_plugin_data($abspath);
+			$data = get_file_data( $abspath, array( 'Name' => 'Plugin Name' ), 'plugin' );
 			$result[$foldername] = $data['Name'];
 		}
 		return $result;
